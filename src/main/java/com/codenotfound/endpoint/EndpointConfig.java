@@ -13,11 +13,14 @@ public class EndpointConfig {
 
   @Autowired
   private Bus bus;
+  
+  @Autowired
+  private HelloWorldImpl helloWrold;
 
   @Bean
   public Endpoint endpoint() {
     EndpointImpl endpoint =
-        new EndpointImpl(bus, new HelloWorldImpl());
+        new EndpointImpl(bus, helloWrold);
     endpoint.publish("/helloworld");
 
     return endpoint;

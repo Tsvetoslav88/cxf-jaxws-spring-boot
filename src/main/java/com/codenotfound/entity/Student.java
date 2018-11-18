@@ -83,6 +83,11 @@ public class Student implements Serializable{
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+	}
+
 //	public Date getDateOfBirth() {
 //		return dateOfBirth;
 //	}
@@ -97,4 +102,6 @@ public class Student implements Serializable{
 //				+ ", dateOfBirth=" + dateOfBirth + "]";
 //	}
 
+	
+	
 }
